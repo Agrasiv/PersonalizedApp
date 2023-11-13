@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="PU1-Wh-AGq" customClass="DietsTableViewCell" customModule="PersonalizeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PU1-Wh-AGq" id="b3O-os-Jie">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smp-vs-dhA" customClass="DLRadioButton">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                        <inset key="contentEdgeInsets" minX="-300" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="ic_selected"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_unselected"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="didTappedSelected:" destination="PU1-Wh-AGq" eventType="touchUpInside" id="8by-t3-5Iw"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9F9-f9-cER">
+                        <rect key="frame" x="50" y="28" width="39.666666666666657" height="20"/>
+                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-mI-YV1">
+                        <rect key="frame" x="94.666666666666671" y="29" width="20" height="18.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5yu-j6-oSp"/>
+                            <constraint firstAttribute="width" constant="20" id="jLb-30-FQt"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCC-Gs-y6n">
+                        <rect key="frame" x="94.666666666666671" y="28" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="TcN-SE-jRp"/>
+                            <constraint firstAttribute="width" constant="20" id="b7d-SA-pe6"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="didTappedMoreInfo:" destination="PU1-Wh-AGq" eventType="touchUpInside" id="Aej-cN-g0W"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kXP-mI-YV1" firstAttribute="centerY" secondItem="b3O-os-Jie" secondAttribute="centerY" id="7fw-CK-m4N"/>
+                    <constraint firstItem="hCC-Gs-y6n" firstAttribute="centerY" secondItem="b3O-os-Jie" secondAttribute="centerY" id="AeX-US-gCu"/>
+                    <constraint firstItem="smp-vs-dhA" firstAttribute="top" secondItem="b3O-os-Jie" secondAttribute="top" id="An9-xA-lEs"/>
+                    <constraint firstItem="9F9-f9-cER" firstAttribute="leading" secondItem="b3O-os-Jie" secondAttribute="leading" constant="50" id="MMd-lW-IXa"/>
+                    <constraint firstItem="kXP-mI-YV1" firstAttribute="leading" secondItem="9F9-f9-cER" secondAttribute="trailing" constant="5" id="SiF-Bg-MXB"/>
+                    <constraint firstItem="smp-vs-dhA" firstAttribute="leading" secondItem="b3O-os-Jie" secondAttribute="leading" id="XGG-0x-Lq5"/>
+                    <constraint firstItem="9F9-f9-cER" firstAttribute="centerY" secondItem="b3O-os-Jie" secondAttribute="centerY" id="a78-xq-KG5"/>
+                    <constraint firstAttribute="trailing" secondItem="smp-vs-dhA" secondAttribute="trailing" id="crX-Ob-PNt"/>
+                    <constraint firstAttribute="bottom" secondItem="smp-vs-dhA" secondAttribute="bottom" id="pHQ-x8-dIg"/>
+                    <constraint firstItem="hCC-Gs-y6n" firstAttribute="leading" secondItem="9F9-f9-cER" secondAttribute="trailing" constant="5" id="rc4-xR-ssh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="infoBtn" destination="hCC-Gs-y6n" id="Jrd-YZ-YUm"/>
+                <outlet property="name" destination="9F9-f9-cER" id="zWW-pC-ia5"/>
+                <outlet property="wholeBtn" destination="smp-vs-dhA" id="fQF-Jw-SPn"/>
+            </connections>
+            <point key="canvasLocation" x="-141.22137404580153" y="2.1126760563380285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
+        <image name="ic_selected" width="24" height="24"/>
+        <image name="ic_unselected" width="24" height="24"/>
+    </resources>
+</document>
